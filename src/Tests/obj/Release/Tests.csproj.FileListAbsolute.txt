@@ -16,5 +16,4 @@ D:\Projects\Protoreg\src\Tests\bin\Release\Tests.pdb
 D:\Projects\Protoreg\src\Tests\bin\Release\Protoreg.dll
 D:\Projects\Protoreg\src\Tests\bin\Release\protobuf-net.dll
 D:\Projects\Protoreg\src\Tests\bin\Release\Protoreg.pdb
-D:\Projects\Protoreg\src\Tests\bin\Release\protobuf-net.xml
 D:\Projects\Protoreg\src\Tests\obj\Release\Tests.csprojResolveAssemblyReference.cache

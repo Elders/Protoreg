@@ -5,9 +5,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using LaCore.Hyperion.Infrastructure.MassTransit.Protobuff;
+using Protoreg.Protobuff;
 
-namespace LaCore.Hyperion.Infrastructure.MassTransit
+namespace Protoreg
 {
     public class ProtoRegistration
     {

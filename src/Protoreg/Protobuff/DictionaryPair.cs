@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LaCore.Hyperion.Infrastructure.MassTransit.Protobuff
+namespace Protoreg.Protobuff
 {
     [DataContract]
     public class DictionaryPair

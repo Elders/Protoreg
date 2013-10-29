@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using LaCore.Hyperion.Infrastructure.MassTransit;
+using Protoreg;
 
 namespace Tests
 {
@@ -19,7 +19,7 @@ namespace Tests
             serializer.Build();
             using (var stream = new MemoryStream())
             {
-                var obj = new MyClass(1, "2", new List<string>() { "a", "b" });
+                var obj = new MyClass(1, "2", new Dictionary<string, string>() { { "a", "b" } });
                 serializer.Serialize(stream, obj);
                 stream.Position = 0;
                 MyClass deserObj = serializer.Deserialize(stream) as MyClass;
@@ -36,7 +36,7 @@ namespace Tests
         {
             public MyClass() { }
 
-            public MyClass(int myProperty, string myString, List<string> myStrings)
+            public MyClass(int myProperty, string myString, Dictionary<string, string> myStrings)
             {
                 MyProperty = myProperty;
                 MyString = myString;
@@ -49,7 +49,7 @@ namespace Tests
             public string MyString { get; set; }
 
             [DataMember(Order = 3)]
-            public List<string> MyStrings { get; set; }
+            public Dictionary<string, string> MyStrings { get; set; }
         }
     }
 }

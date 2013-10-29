@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using ProtoBuf;
 using ProtoBuf.Meta;
 
-namespace LaCore.Hyperion.Infrastructure.MassTransit.Protobuff
+namespace Protoreg.Protobuff
 {
     public class ProtocolBufferSerializer
     {

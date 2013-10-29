@@ -8,7 +8,5 @@ D:\Projects\Protoreg\src\Protoreg\Protoreg\obj\Release\Protoreg.pdb
 D:\Projects\Protoreg\src\Protoreg\bin\Release\Protoreg.dll.config
 D:\Projects\Protoreg\src\Protoreg\bin\Release\Protoreg.dll
 D:\Projects\Protoreg\src\Protoreg\bin\Release\Protoreg.pdb
-D:\Projects\Protoreg\src\Protoreg\bin\Release\protobuf-net.xml
-D:\Projects\Protoreg\src\Protoreg\obj\Release\Protoreg.csprojResolveAssemblyReference.cache
 D:\Projects\Protoreg\src\Protoreg\obj\Release\Protoreg.dll
 D:\Projects\Protoreg\src\Protoreg\obj\Release\Protoreg.pdb

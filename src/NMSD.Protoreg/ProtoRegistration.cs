@@ -1,13 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Protoreg.Protobuff;
+using NMSD.Protoreg.Protobuff;
 
-namespace Protoreg
+namespace NMSD.Protoreg
 {
     public class ProtoRegistration
     {
@@ -45,7 +42,12 @@ namespace Protoreg
             var pbbAsm = Assembly.GetAssembly(typeof(Message));
             if (!contratAssemblies.Contains(pbbAsm))
                 contratAssemblies.Add(pbbAsm);
-            var typesFromAssemblies = assemblies.AsEnumerable().SelectMany(assembly => assembly.GetTypes().Where(x => x.GetCustomAttributes(false).Where(y => y.GetType().Name == "DataContractAttribute" || y.GetType().Name == "ProtoContractAttribute").Count() > 0)).ToList();
+            var typesFromAssemblies = assemblies.AsEnumerable()
+                                                .SelectMany(assembly => assembly.GetTypes()
+                                                                                .Where(x => x.GetCustomAttributes(false)
+                                                                                             .Where(y => y.GetType().Name == "DataContractAttribute" || y.GetType().Name == "ProtoContractAttribute")
+                                                                                             .Count() > 0))
+                                                .ToList();
             typesFromAssemblies.AddRange(commonTypes);
             return typesFromAssemblies.ToArray();
         }

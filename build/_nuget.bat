@@ -1,2 +1,2 @@
-powershell -ExecutionPolicy Unrestricted -Command "& {Import-Module .\psake.psm1; Invoke-psake .\build.ps1 nuget -properties @{ config='Release';assemblyInformationalVersion='Protoreg 1.0';assemblyVersion='1.0.0.0';assemblyFileVersion='1.0.7400.?';assemblyRevision='3' }%*} "
+powershell -ExecutionPolicy Unrestricted -Command "& {Import-Module .\psake.psm1; Invoke-psake .\build.ps1 nuget -properties @{ config='Release';assemblyVersion='1.0.0.0';assemblyFileVersion='1.0.?.7400';assemblyRevision='4' }%*} "
 PAUSE

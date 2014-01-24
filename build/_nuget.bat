@@ -1,2 +1,2 @@
-powershell -nologo -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "& {Import-Module .\psake.psm1; Invoke-psake .\build.ps1 nuget -properties @{ config='Release';assemblyRevision='5'}; exit !($psake.build_success)}"
+powershell -nologo -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "& {Import-Module .\psake.psm1; Invoke-psake .\build.ps1 nuget -properties @{ config='Release';assemblyRevision='6'}; exit !($psake.build_success)}"
 PAUSE

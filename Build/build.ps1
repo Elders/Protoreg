@@ -18,7 +18,7 @@ properties {
 	$nugetSourceFiles = @("NMSD.Protoreg.dll", "NMSD.Protoreg.pdb")
 }
 
-Framework "4.5.1"
+Framework "4.0"
 . ".\nyx.ps1"
 
 task build -depends Init, AssemblyInfo, ValidateConfig, BuildProtoreg

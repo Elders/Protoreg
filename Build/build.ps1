@@ -21,11 +21,15 @@ properties {
 Framework "4.5.1"
 . ".\nyx.ps1"
 
-task build -depends AssemblyInfo, ValidateConfig, BuildProtoreg
-task nuget -depends AssemblyInfo, ValidateConfig, BuildProtoreg, PublishNugetPackage
+task build -depends Init, AssemblyInfo, ValidateConfig, BuildProtoreg
+task nuget -depends Init, AssemblyInfo, ValidateConfig, BuildProtoreg, PublishNugetPackage
 
 task ValidateConfig {
     assert ( "debug", "release", "stage" -contains $config) ` "Invalid config: $config; valid values are debug or release or stage";
+}
+
+task Init {
+	Delete-Directory("$root\bin")
 }
 
 task AssemblyInfo {

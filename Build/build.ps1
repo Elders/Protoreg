@@ -12,7 +12,7 @@ properties {
 	$assemblyInformationalVersion = "dev";
 	$assemblyFileVersion = "1.0.?.7400";
 	$assemblyVersion = "1.0.0.0";
-	$assemblyRevision = "0";
+	$assemblyRevision = "7";
 
 	$nugetSourceDir = "NMSD.Protoreg"
 	$nugetSourceFiles = @("NMSD.Protoreg.dll", "NMSD.Protoreg.pdb")
@@ -33,7 +33,6 @@ task Init {
 }
 
 task AssemblyInfo {
-	
     Create-AssemblyVersionInfo `
 		-assemblyVersion $assemblyVersion `
 		-assemblyFileVersion $assemblyFileVersion.Replace("?",$assemblyRevision) `
@@ -68,6 +67,6 @@ task PublishNugetPackage {
         -file "$nugetDeploy\Product.nuspec" `
 
     Nuget-BuildPackage $nugetSourceDir $nugetSourceFiles
-	write-host $version
+
     Nuget-PushPackage $version
 }

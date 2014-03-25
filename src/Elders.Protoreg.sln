@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMSD.Protoreg", "NMSD.Protoreg\NMSD.Protoreg.csproj", "{3E1FF58E-DA34-460D-B5D4-7A0461B55773}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elders.Protoreg", "Elders.Protoreg\Elders.Protoreg.csproj", "{3E1FF58E-DA34-460D-B5D4-7A0461B55773}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMSD.Protoreg.Tests", "NMSD.Protoreg.Tests\NMSD.Protoreg.Tests.csproj", "{D31F5F05-1E75-4832-8FFF-B36E02996251}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elders.Protoreg.Tests", "Elders.Protoreg.Tests\Elders.Protoreg.Tests.csproj", "{D31F5F05-1E75-4832-8FFF-B36E02996251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

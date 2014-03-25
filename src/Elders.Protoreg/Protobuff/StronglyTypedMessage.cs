@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace NMSD.Protoreg.Protobuff
+namespace Elders.Protoreg.Protobuff
 {
     [DataContract(Name = "e1eb04bd-d576-47d9-a8e8-aa7eb08e0c5c")]
     public class StronglyTypedMessage<T> : Message

@@ -11,7 +11,7 @@ using System.Text;
 using ProtoBuf;
 using ProtoBuf.Meta;
 
-namespace NMSD.Protoreg.Protobuff
+namespace Elders.Protoreg.Protobuff
 {
     public class ProtocolBufferSerializer
     {

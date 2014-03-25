@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NMSD.Protoreg.Tests
+namespace Elders.Protoreg.Tests
 {
     class Program
     {

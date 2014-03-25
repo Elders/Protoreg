@@ -1,14 +1,14 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace NMSD.Protoreg.Tests
+namespace Elders.Protoreg.Tests
 {
-    [DataContract(Name = "76d61c8c-93bc-44b1-bee8-5e41b0abc7fd")]
-    public class ProtobufTestObject
+    [DataContract(Name = "42dd25bd-e3f4-42a5-9c6d-6a3f831c33e4")]
+    public class ProtoregTestObject
     {
-        ProtobufTestObject() { }
+        ProtoregTestObject() { }
 
-        public ProtobufTestObject(Guid guidProperty, string stringProperty, int intProperty, long longProperty)
+        public ProtoregTestObject(Guid guidProperty, string stringProperty, int intProperty, long longProperty)
         {
             GuidProperty = guidProperty;
             StringProperty = stringProperty;

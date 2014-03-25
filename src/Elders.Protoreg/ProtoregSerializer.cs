@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.IO;
-using NMSD.Protoreg.Protobuff;
+using Elders.Protoreg.Protobuff;
 
-namespace NMSD.Protoreg
+namespace Elders.Protoreg
 {
     public class ProtoregSerializer
     {

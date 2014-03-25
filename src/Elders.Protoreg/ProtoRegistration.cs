@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using NMSD.Protoreg.Protobuff;
+using Elders.Protoreg.Protobuff;
 
-namespace NMSD.Protoreg
+namespace Elders.Protoreg
 {
     public class ProtoRegistration
     {

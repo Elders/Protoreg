@@ -7,8 +7,8 @@
     <ProjectGuid>{3E1FF58E-DA34-460D-B5D4-7A0461B55773}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NMSD.Protoreg</RootNamespace>
-    <AssemblyName>NMSD.Protoreg</AssemblyName>
+    <RootNamespace>Elders.Protoreg</RootNamespace>
+    <AssemblyName>Elders.Protoreg</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\$(Configuration)\NMSD.Protoreg</OutputPath>
+    <OutputPath>..\..\bin\$(Configuration)\Elders.Protoreg</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -27,7 +27,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\$(Configuration)\NMSD.Protoreg</OutputPath>
+    <OutputPath>..\..\bin\$(Configuration)\Elders.Protoreg</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>

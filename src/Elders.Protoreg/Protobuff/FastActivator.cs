@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace NMSD.Protoreg.Protobuff
+namespace Elders.Protoreg.Protobuff
 {
     public static class FastActivator
     {

@@ -2,20 +2,20 @@ properties {
 	$base_directory = Resolve-Path ..
 	$src_directory = "$base_directory\src"
  	
-	$sln="NMSD.Protoreg.sln"
+	$sln="Elders.Protoreg.sln"
 	
 	$config = "debug"; #debug or release or stage
 	
-	$company="NMSD"
+	$company="Elders"
 	$product="Protoreg"
  
 	$assemblyInformationalVersion = "dev";
-	$assemblyFileVersion = "1.0.?.7400";
+	$assemblyFileVersion = "1.0.?";
 	$assemblyVersion = "1.0.0.0";
-	$assemblyRevision = "7";
+	$assemblyRevision = "8";
 
-	$nugetSourceDir = "NMSD.Protoreg"
-	$nugetSourceFiles = @("NMSD.Protoreg.dll", "NMSD.Protoreg.pdb")
+	$nugetSourceDir = "Elders.Protoreg"
+	$nugetSourceFiles = @("Elders.Protoreg.dll", "Elders.Protoreg.pdb")
 }
 
 Framework "4.0"
@@ -54,10 +54,10 @@ task PublishNugetPackage {
     Nuget-CreateNuspec `
         -authors "Nikolai Mynkow, Simeon Dimov" `
         -owners "Nikolai Mynkow, Simeon Dimov" `
-        -copyright NMSD `
+        -copyright Elders `
         -requireLicenseAcceptance false `
-		-licenseUrl https://github.com/NMSD/Protoreg/blob/master/LICENSE `
-        -projectUrl https://github.com/NMSD/Protoreg `
+		-licenseUrl https://github.com/Elders/Protoreg/blob/master/LICENSE `
+        -projectUrl https://github.com/Elders/Protoreg `
         -product $product `
         -version  $version `
         -description "Protobuf-net wrapper" `

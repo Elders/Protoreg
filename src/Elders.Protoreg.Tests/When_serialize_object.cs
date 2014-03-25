@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using Machine.Specifications;
-using NMSD.Protoreg;
+using Elders.Protoreg;
 
-namespace NMSD.Protoreg.Tests
+namespace Elders.Protoreg.Tests
 {
     [Subject("Serialization")]
     public class When_serialize_object

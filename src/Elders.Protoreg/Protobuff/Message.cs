@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace NMSD.Protoreg.Protobuff
+namespace Elders.Protoreg.Protobuff
 {
     [DataContract(Name = "e39c7d44-2bd0-4f17-9b3d-71ca9678a7db"), Serializable]
     public class Message

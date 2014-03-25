@@ -1,4 +1,4 @@
-namespace NMSD.Protoreg.Tests
+namespace Elders.Protoreg.Tests
 {
     public static class MeasureExecutionTime
     {

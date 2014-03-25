@@ -7,8 +7,8 @@
     <ProjectGuid>{D31F5F05-1E75-4832-8FFF-B36E02996251}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NMSD.Protoreg.Tests</RootNamespace>
-    <AssemblyName>NMSD.Protoreg.Tests</AssemblyName>
+    <RootNamespace>Elders.Protoreg.Tests</RootNamespace>
+    <AssemblyName>Elders.Protoreg.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\$(Configuration)\NMSD.Protoreg.Tests</OutputPath>
+    <OutputPath>..\..\bin\$(Configuration)\Elders.Protoreg.Tests</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -27,13 +27,13 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\$(Configuration)\NMSD.Protoreg.Tests</OutputPath>
+    <OutputPath>..\..\bin\$(Configuration)\Elders.Protoreg.Tests</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>NMSD.Protoreg.Tests.Program</StartupObject>
+    <StartupObject>Elders.Protoreg.Tests.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Machine.Specifications">
@@ -76,9 +76,9 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NMSD.Protoreg\NMSD.Protoreg.csproj">
+    <ProjectReference Include="..\Elders.Protoreg\Elders.Protoreg.csproj">
       <Project>{3e1ff58e-da34-460d-b5d4-7a0461b55773}</Project>
-      <Name>NMSD.Protoreg</Name>
+      <Name>Elders.Protoreg</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

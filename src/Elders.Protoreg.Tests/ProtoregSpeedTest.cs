@@ -1,18 +1,23 @@
 using System;
 using System.IO;
-using NMSD.Protoreg.Protobuff;
+using Elders.Protoreg;
 
-namespace NMSD.Protoreg.Tests
+namespace Elders.Protoreg.Tests
 {
-    public class ProtobufSpeedTest
+    public class ProtoregSpeedTest
     {
-        StronglyTypedMessage<ProtobufTestObject> testObject;
+        ProtoregSerializer serializer;
+        ProtoregTestObject testObject;
         byte[] testObjectBytes;
 
-        public ProtobufSpeedTest()
+        public ProtoregSpeedTest()
         {
-            testObject = new StronglyTypedMessage<ProtobufTestObject>();
-            testObject.Body = new ProtobufTestObject(Guid.NewGuid(), "string", Int32.MaxValue, long.MaxValue);
+            var protoReg = new ProtoRegistration();
+            protoReg.RegisterCommonType<ProtoregTestObject>();
+            serializer = new ProtoregSerializer(protoReg);
+            serializer.Build();
+
+            testObject = new ProtoregTestObject(Guid.NewGuid(), "string", Int32.MaxValue, long.MaxValue);
             testObjectBytes = Serialize(testObject);
         }
 
@@ -22,7 +27,7 @@ namespace NMSD.Protoreg.Tests
             {
                 Serialize(testObject);
             }, numberOfExecutions);
-            Console.WriteLine("Serialization of {0} objects with Protobuf took:", numberOfExecutions);
+            Console.WriteLine("Serialization of {0} objects with Protoreg took:", numberOfExecutions);
             Console.WriteLine(results);
         }
 
@@ -32,7 +37,7 @@ namespace NMSD.Protoreg.Tests
             {
                 Deserialize(testObjectBytes);
             }, numberOfExecutions);
-            Console.WriteLine("Deserialize of {0} objects with Protobuf took:", numberOfExecutions);
+            Console.WriteLine("Deserialize of {0} objects with Protoreg took:", numberOfExecutions);
             Console.WriteLine(results);
         }
 
@@ -40,16 +45,16 @@ namespace NMSD.Protoreg.Tests
         {
             using (var stream = new MemoryStream())
             {
-                ProtoBuf.Serializer.Serialize(stream, testObject);
+                serializer.Serialize(stream, testObject);
                 return stream.ToArray();
             }
         }
 
-        StronglyTypedMessage<ProtobufTestObject> Deserialize(byte[] buffer)
+        ProtoregTestObject Deserialize(byte[] buffer)
         {
             using (var stream = new MemoryStream(buffer))
             {
-                return ProtoBuf.Serializer.Deserialize<StronglyTypedMessage<ProtobufTestObject>>(stream);
+                return serializer.Deserialize(stream) as ProtoregTestObject;
             }
         }
 

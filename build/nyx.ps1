@@ -141,7 +141,6 @@ function global:Nuget-CreateNuspec
         [string]$version = $(throw "version is a required parameter."),
         [string]$authors,
         [string]$owners,
-		[string]$icon,
         [string]$licenseUrl,
         [string]$projectUrl,
         [string]$requireLicenseAcceptance,
@@ -171,7 +170,6 @@ function global:Nuget-CreateNuspec
 					"Version" = $version;
 					"Authors" = $authors;
 					"Owners" = $owners;
-					"Icon" = $icon;
 					"LicenseUrl" = $licenseUrl;
 					"Require License Acceptance" = $requireLicenseAcceptance;
 					"ProjectUrl" = $projectUrl;
@@ -187,7 +185,6 @@ function global:Nuget-CreateNuspec
     <version>$version</version>
     <authors>$authors</authors>
     <owners>$owners</owners>
-	<iconUrl>$icon</iconUrl>
     <licenseUrl>$licenseUrl</licenseUrl>
     <projectUrl>$projectUrl</projectUrl>
     <requireLicenseAcceptance>$requireLicenseAcceptance</requireLicenseAcceptance>

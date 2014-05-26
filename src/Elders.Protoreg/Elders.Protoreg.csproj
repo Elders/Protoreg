@@ -50,6 +50,7 @@
     <Compile Include="Protobuff\ContractException.cs" />
     <Compile Include="Protobuff\FastActivator.cs" />
     <Compile Include="ProtoRegistration.cs" />
+    <Compile Include="ProtoregSerializableException.cs" />
     <Compile Include="ProtoregSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protobuff\Message.cs" />

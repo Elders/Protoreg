@@ -12,7 +12,7 @@ properties {
 	$assemblyInformationalVersion = "dev";
 	$assemblyFileVersion = "1.0.?";
 	$assemblyVersion = "1.0.0.0";
-	$assemblyRevision = "9";
+	$assemblyRevision = "10";
 
 	$nugetSourceDir = "Elders.Protoreg"
 	$nugetSourceFiles = @("Elders.Protoreg.dll", "Elders.Protoreg.pdb")

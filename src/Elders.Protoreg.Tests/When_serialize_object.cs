@@ -11,7 +11,7 @@ namespace Elders.Protoreg.Tests
         Establish context = () =>
         {
             var protoReg = new ProtoRegistration();
-            protoReg.RegisterAssembly<ProtoregTestObject>();
+            protoReg.RegisterCommonType<ProtoregTestObject>();
             serializer = new ProtoregSerializer(protoReg);
             serializer.Build();
 

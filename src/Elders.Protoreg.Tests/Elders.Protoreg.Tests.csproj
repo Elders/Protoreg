@@ -50,9 +50,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="When_serialize_object_with_guid_with_hash_code_that_can_not_be_devided_by_4.cs" />
+    <Compile Include="When_serialize_object_with_guid_with_hash_code_between_19000_and_19999.cs" />
     <Compile Include="ProtobufSpeedTest.cs" />
     <Compile Include="ProtobufTestObject.cs" />
     <Compile Include="ProtoregSpeedTest.cs" />
@@ -67,6 +70,7 @@
     <Compile Include="$(SolutionDir)AssemblyCompanyProductInfo.cs">
       <Link>Properties\AssemblyCompanyProductInfo.cs</Link>
     </Compile>
+    <Compile Include="When_serialize_object_with_guid_with_negative_hash_code.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

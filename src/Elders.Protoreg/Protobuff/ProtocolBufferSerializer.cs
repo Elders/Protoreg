@@ -150,6 +150,8 @@ namespace Elders.Protoreg.Protobuff
             RegisterContract(typeof(Message), typeof(StronglyTypedMessage<dynamic>));
             RegisterContract(typeof(Exception));
             RegisterContract(typeof(SerializationException));
+            RegisterContract(typeof(DuplicateContractNameException));
+            RegisterContract(typeof(InvalidContractNameException));
         }
 
         private void RegisterContract(Type contract)
@@ -201,14 +203,19 @@ namespace Elders.Protoreg.Protobuff
                 Guid contarctEmbededHash;
                 if (Guid.TryParse(attribute.Name, out contarctEmbededHash))
                     contractHash = contarctEmbededHash;
+
+                if(!ProtoRegistration.IsValidProtoregContractId(contarctEmbededHash))
+                    throw new InvalidContractNameException(contract);
             }
 
             if (contractHash == Guid.Empty)
-                throw new Exception("Cannot register hash for contract " + contract.FullName);
+                throw new InvalidContractNameException(contract);
 
             hashes[contractHash] = contract;
             types[contract] = contractHash;
         }
+
+
 
         private void RegisterToRuntimeModel(Tuple<Type, Type> contract)
         {
@@ -217,13 +224,17 @@ namespace Elders.Protoreg.Protobuff
                 var hash = types[contract.Item2];
 
                 int fieldNumber = Math.Abs(hash.GetHashCode()) / 4;
+
+                if (!ProtoRegistration.IsValidProtobufField(fieldNumber))
+                    throw new InvalidContractNameException(contract.Item2);
+
                 bool shouldRegisterSubType = RuntimeTypeModel.Default[contract.Item1].GetSubtypes() == null || !RuntimeTypeModel.Default[contract.Item1].GetSubtypes().Any(x => x.FieldNumber == fieldNumber);
                 if (shouldRegisterSubType)
                     RuntimeTypeModel.Default[contract.Item1].AddSubType(fieldNumber, contract.Item2);
                 try { runtimeModelFieldNumbers.Add(fieldNumber, contract.Item2); }
                 catch (ArgumentException)
                 {
-                    throw new Exception(String.Format("A duplicate runtime model field number detected for contract '{0}'. If you use DataContractAttribute with Name='some Guid' it is recommended to test the Guid with the following condition which must be TRUE: 'Math.Abs(theGuid.GetHashCode()) % 4 == 0'.", contract.Item2.FullName));
+                    throw new DuplicateContractNameException(contract.Item2);
                 }
             }
         }

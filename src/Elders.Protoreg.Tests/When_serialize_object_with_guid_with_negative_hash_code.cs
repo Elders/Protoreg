@@ -1,11 +1,7 @@
-﻿using Elders.Protoreg.Protobuff;
-using Machine.Specifications;
+﻿using Machine.Specifications;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Elders.Protoreg.Tests
 {

@@ -152,6 +152,7 @@ namespace Elders.Protoreg.Protobuff
             RegisterContract(typeof(SerializationException));
             RegisterContract(typeof(DuplicateContractNameException));
             RegisterContract(typeof(InvalidContractNameException));
+            RegisterContract(typeof(ProtoregSerializableException));
         }
 
         private void RegisterContract(Type contract)
@@ -204,7 +205,7 @@ namespace Elders.Protoreg.Protobuff
                 if (Guid.TryParse(attribute.Name, out contarctEmbededHash))
                     contractHash = contarctEmbededHash;
 
-                if(!ProtoRegistration.IsValidProtoregContractId(contarctEmbededHash))
+                if (!ProtoRegistration.IsValidProtoregContractId(contarctEmbededHash))
                     throw new InvalidContractNameException(contract);
             }
 
@@ -231,7 +232,8 @@ namespace Elders.Protoreg.Protobuff
                 bool shouldRegisterSubType = RuntimeTypeModel.Default[contract.Item1].GetSubtypes() == null || !RuntimeTypeModel.Default[contract.Item1].GetSubtypes().Any(x => x.FieldNumber == fieldNumber);
                 if (shouldRegisterSubType)
                     RuntimeTypeModel.Default[contract.Item1].AddSubType(fieldNumber, contract.Item2);
-                try { runtimeModelFieldNumbers.Add(fieldNumber, contract.Item2); }
+                try
+                { runtimeModelFieldNumbers.Add(fieldNumber, contract.Item2); }
                 catch (ArgumentException)
                 {
                     throw new DuplicateContractNameException(contract.Item2);

@@ -152,7 +152,6 @@ namespace Elders.Protoreg.Protobuff
             RegisterContract(typeof(SerializationException));
             RegisterContract(typeof(DuplicateContractNameException));
             RegisterContract(typeof(InvalidContractNameException));
-            RegisterContract(typeof(ProtoregSerializableException));
         }
 
         private void RegisterContract(Type contract)
